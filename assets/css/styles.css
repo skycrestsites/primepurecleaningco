@@ -257,9 +257,9 @@ h1 em, h2 em, h3 em { font-style: italic; font-weight: 500; color: var(--blue-60
 .hero { position: relative; background: var(--cream-100); overflow: hidden; }
 .hero--book { overflow: visible; }
 .hero--book .container { align-items: start; grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr); }
-.book-card { background: var(--white); border: 1px solid var(--line); box-shadow: var(--shadow-lg); position: relative; }
+.book-card { background: var(--white); border: 1px solid var(--line); box-shadow: var(--shadow-lg); position: relative; height: calc(100dvh - var(--header-h) - 2.5rem); }
 .book-card::after { content: ""; position: absolute; top: -12px; right: -12px; width: 56px; height: 56px; border-top: 1px solid var(--gold-500); border-right: 1px solid var(--gold-500); pointer-events: none; }
-.book-card iframe { display: block; width: 100%; max-width: 100%; background: var(--white); }
+.book-card iframe { display: block; width: 100%; height: 100%; border: 0; background: var(--white); }
 @media (min-width: 1024px) {
   .hero--book .container > div:first-child { position: sticky; top: calc(var(--header-h) + 28px); }
 }
@@ -631,6 +631,7 @@ h1 em, h2 em, h3 em { font-style: italic; font-weight: 500; color: var(--blue-60
   .area-list li { font-size: .92rem; padding: .8rem 0; }
   .form-grid { grid-template-columns: 1fr; }
   .form-card::after, .book-card::after { top: -8px; right: -8px; width: 40px; height: 40px; }
+  .book-card { height: calc(100dvh - var(--header-h) - 6.5rem); }
   .faq details p { padding-right: 0; }
   .faq summary { padding: 1.25rem 0; }
   .cta-band .container { flex-direction: column; align-items: flex-start; }
